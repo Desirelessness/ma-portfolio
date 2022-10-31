@@ -1,0 +1,302 @@
+/* ==================root and all primary stuff */
+
+:root {
+    --skin-color: #ED6011;
+    --bg-l: #ea4;
+    --hover-effect: rgb(15, 94, 87);
+    --anchor-tag: rgb(131, 179, 235);
+    --gradient: linear-gradient( to right, #b754de, #ff539c, #ffbd4f);
+    --grad-3: linear-gradient( to bottom, #5a5dca, #6f4ebe, #8bcfe1, #ff539c, #ffbd4f);
+}
+
+html {
+    text-transform: capitalize;
+}
+
+h2 {
+    /* margin: 3rem; */
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    background: var(--grad-3);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+/* =======================end===================== */
+
+
+/* ======================header section============ */
+
+.header {
+    background-color: #ED6011;
+    /* width: 98%; */
+    margin-left: 2rem;
+    color: #16C1B9;
+}
+
+.scrolled {
+    background: #4C181C;
+    box-shadow: 0 1rem 2rem 0 #12161f;
+    /* -webkit-box-sizing: 0 1rem 2rem 0 #12161f; */
+}
+
+.logo {
+    /* width: 150px; */
+    font-style: italic;
+    font-family: fantasy;
+    font-size: 30px;
+    letter-spacing: .3rem;
+    position: relative;
+    display: inline-block;
+    color: #16C1B9;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-bottom: 5px solid var(--bg-l);
+    border-left: 5px solid var(--bg-l);
+    bottom: 0;
+    left: -10px;
+    transition: 0.5s;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-top: 5px solid var(--bg-l);
+    border-right: 5px solid var(--bg-l);
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.logo:hover::after,
+.logo:hover:before {
+    width: 80%;
+    height: 80%;
+}
+
+.header button {
+    background: transparent;
+}
+
+.navbar-icon {
+    display: block;
+    height: .2rem;
+    width: 1.5rem;
+    margin: .3rem 0;
+    background-color: #16C1B9;
+}
+
+.navbar-toggler {
+    border: 0;
+    line-height: 2px;
+}
+
+.wrapper .nav-item .nav-link {
+    position: relative;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.wrapper .nav-item .nav-link::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #12161f;
+    transition: 0.3s;
+    bottom: 0;
+}
+
+.wrapper .nav-item .nav-link.active::after,
+.wrapper .nav-item .nav-link:hover::after {
+    width: 100%
+}
+
+
+/* =================2nd end================ */
+
+
+/* =========================home section=================== */
+
+.home-wrapper {
+    background: url(img/peakpx.jpg) center center/cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.home-wrapper span {
+    color: var(--anchor-tag);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =============3rd end================ */
+
+.about-wrapper {
+    background: url(img/pexels-eberhard-grossgasteiger-2098428.jpg) center center/cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+
+/* ===================4th end================== */
+
+
+/* ===================service section================== */
+
+img {
+    width: 100%;
+}
+
+.service-wrapper {
+    background-color: #12161f;
+    color: #fff;
+}
+
+.service-wrapper .custom-card {
+    box-shadow: 0 0 2rem 1rem rgb(8, 8, 39);
+    height: 18rem;
+}
+
+
+/* ==================5th end======================= */
+
+
+/* ==================portfolio section============== */
+
+.portfolio-wrapper {
+    background: url(img/4884841.jpg) center center/cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+
+/* scroll of portfolio */
+
+.test {
+    display: inline-block;
+    height: 100%;
+    min-height: 35vw;
+    width: 100%;
+    border: 2px solid rgb(255, 166, 0);
+    background-image: url('img/cap2.png');
+    background-size: cover;
+    background-position: top center;
+    transition: background-position 4s ease-in-out 0s;
+    box-shadow: 0 0 1rem .5rem goldenrod;
+}
+
+.test:hover {
+    /* content: "hover alittle longer"; */
+    background-position: center bottom;
+    text-align: center;
+}
+
+.solid:hover {
+    /* transform: translateX(50%); */
+    scale: 1.6;
+    z-index: 1;
+}
+
+
+/* ============= 6th end============ */
+
+
+/* ===================== */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ED6011;
+    font-size: small;
+}
+
+
+/* ======================= */
+
+.contact-wrapper {
+    background: url(img/contact3.jpg) center center/cover;
+    color: #fff;
+    font-size: 20px;
+    /* background-attachment: fixed; */
+}
+
+.b {
+    border: .5rem solid var(--skin-color);
+}
+
+.lines span {
+    font-family: fantasy;
+    color: var(--skin-color);
+}
+
+.lines :hover {
+    background-color: var(--hover-effect);
+    scale: 1.2;
+}
+
+.lines a {
+    text-decoration: none;
+    color: var(--anchor-tag);
+}
+
+.footer {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 2.5rem;
+    font-size: large;
+    text-align: center;
+}
+
+.footer span {
+    color: var(--skin-color);
+    font-size: 25px;
+}
+
+
+/* ===============end end============== */
